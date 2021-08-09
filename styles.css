@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    height: 100%;
+    z-index: -1;
+    /* overflow: hidden; */
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav div a{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+.iconoMenu{
+    display: block;
+    animation: moverIzquierda 1s ease-in;
+    z-index: 100;
+}
+
+header{
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+
+.container{
+    width: 95%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+img{
+    display: block;
+    height: 600px;
+    object-fit: cover;
+    animation: moverArriba 1s ease-in;
+}
+
+.textos{
+    width: 50%;
+    color: #fff;
+}
+
+.textos h1{
+    font-size: 80px;
+    animation: moverDerecha 1s ease-in;
+}
+
+.textos h2{
+    font-size: 30px;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.textos a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+    animation: moverArriba 1s ease-in;
+}
+
+.wave{
+    /* height: 100px; */
+    width: 100%;
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* .relleno{
+    background: #1D2671;
+    height: 100vh;
+} */
+
+.enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.uno{
+    clip-path: circle(0% at 3% 3%);
+}
+
+.dos{
+    clip-path: circle(139.9% at 5% 5%);
+}
+
+/* Animacion para mover el menu desde la izq a la derecha al entrar o recargar la pagina */
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        /* si quiero q se mueva de der a izq pongo en positivo */
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width:1400px){
+    img{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    img{
+        height: 330px;
+    }
+
+    .textos h1{
+        font-size: 60px;
+    }
+
+    .textos h2{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:800px){
+    img{
+        height: 290px;
+    }
+
+    .textos h1{
+        font-size: 60px;
+    }
+
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:700px){
+    img{
+        height: 250px;
+    }
+
+    .textos h1{
+        font-size: 40px;
+    }
+
+    .textos h2{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:700px){
+    img{
+        height: 250px;
+    }
+
+    .textos h1{
+        font-size: 40px;
+    }
+
+    .textos h2{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+
+    .textos h1{
+        font-size: 60px;
+    }
+
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:400px){
+    img{
+        height: 150px;
+    }
+
+    .textos h1{
+        font-size: 35px;
+    }
+
+    .textos a{
+        width: 120px;
+    }
+
+    .textos h2{
+        font-size: 15px;
+    }
+}
